@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useMemo, useCallback } from "react";
+import Carousel from "./Carousel";
 
 function External({ memoised }) {
   return <h2> {memoised()}</h2>;
@@ -23,7 +24,8 @@ function App() {
   return (
     <>
       <button onClick={() => setCounter((prev) => prev + 1)}> + </button>
-      <Ext memoised={memoised}></Ext>
+      {/* <Ext memoised={memoised}></Ext> */}
+      <Carousel />
       <button onClick={() => setCounter((prev) => prev - 1)}> - </button>
     </>
   );
